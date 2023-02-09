@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "pwd": "Aa@123456",
+      "fullName": "Admin",
+      "birthday": "2002-04-11",
+      "gender": "female",
+      "email": "admin@gmail.com",
+      "phone": "0123456789"
+    },
+    {
+      "id": "user",
+      "pwd": "Aa@123456",
+      "fullName": "User",
+      "birthday": "2002-07-12",
+      "gender": "female",
+      "email": "user@gmail.com",
+      "phone": "0000000000"
+    },
+    {
+      "id": "hehe",
+      "pwd": "Aa@123456",
+      "fullName": "jdhfdjhj",
+      "birthday": "12002-12-12",
+      "gender": "female",
+      "email": "sdfsdfh@jdfhj.com",
+      "phone": "1234567893"
+    },
+    {
+      "id": "huhu",
+      "pwd": "Aa@123456",
+      "fullName": "hihi",
+      "birthday": "2002-02-21",
+      "gender": "female",
+      "email": "fghj@Hjd.com",
+      "phone": "98989898989"
+    },
+    {
+      "id": "Tutu",
+      "pwd": "Aa@123456",
+      "fullName": "Tu",
+      "birthday": "2002-04-11",
+      "gender": "male",
+      "email": "tu@gmail.com",
+      "phone": "0123456789"
+    },
+    {
+      "id": "tunguyen111",
+      "pwd": "Aa@123456",
+      "fullName": "minh tu",
+      "birthday": "2002-04-11",
+      "gender": "female",
+      "email": "tu@Gmail.com",
+      "phone": "1234567891"
+    },
+    {
+      "id": "minhtu",
+      "pwd": "Aa@123456",
+      "fullName": "Minh Tu",
+      "birthday": "2022-04-12",
+      "gender": false,
+      "email": "tu@gmail.com",
+      "phone": "1212312132"
+    }
+  ]
+}
