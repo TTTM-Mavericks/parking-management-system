@@ -1,6 +1,7 @@
 package com.demo.service.Impl;
 
 import com.demo.entity.Manager;
+import com.demo.repository.BuildingRepository;
 import com.demo.repository.ManagerRepository;
 import com.demo.repository.UserRepository;
 import com.demo.service.ManageService;
@@ -22,6 +23,9 @@ public class ManageServiceImpl implements ManageService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    BuildingRepository buildingRepository;
 
     @Override
     public ManagerResponseDTO save(ManagerDTO dto) {
@@ -57,7 +61,7 @@ public class ManageServiceImpl implements ManageService {
         return "Delete Successfully";
     }
 
-    private ManagerResponseDTO mapperedToManager(Manager manager)
+    public static ManagerResponseDTO mapperedToManager(Manager manager)
     {
         ManagerResponseDTO dto =  new ManagerResponseDTO();
         dto.setIdUser(manager.getIdUser());

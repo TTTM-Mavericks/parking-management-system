@@ -57,7 +57,7 @@ public class CustomerServiceImpl implements CustomerService {
         return "delete successfully";
     }
 
-    private CustomerResponseDTO mapperedToCustomer(Customer customer)
+    public static CustomerResponseDTO mapperedToCustomer(Customer customer)
     {
         CustomerResponseDTO dto = new CustomerResponseDTO();
         dto.setIdUser(customer.getIdUser());
