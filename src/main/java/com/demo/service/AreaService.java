@@ -9,11 +9,11 @@ import java.util.Optional;
 public interface AreaService {
     AreaResponseDTO save(AreaDTO dto);
 
-    Optional<AreaResponseDTO> findById(String Id_Area);
+    Optional<AreaResponseDTO> findById(Long Id_Area);
 
     List<AreaResponseDTO> findAll();
 
-    AreaResponseDTO update(AreaDTO dto, String Id_Area);
+    AreaResponseDTO update(AreaDTO dto, Long Id_Area);
 
-    String delete (String Id_Area);
+    String delete (Long Id_Area);
 }

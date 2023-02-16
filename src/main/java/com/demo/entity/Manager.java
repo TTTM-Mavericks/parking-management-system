@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Manager {
     @Id
-    @Column(name = "Id_Manager")
+    @Column(name = "Id_Manager", unique = false)
     private String IdUser;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)

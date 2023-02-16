@@ -1,5 +1,6 @@
 package com.demo.utils.response;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,18 +10,8 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookingCustomerResponseDTO {
-    private int id_Booking;
-
-    private String fullname;
-
-    private String email;
-
-    private String phone;
-
-    private String id_Building;
-
-    private String type_Of_Vehicle;
+public class PaymentReponseDTO {
+    private Long Id_Booking;
 
     private String id_C_Slot;
 
@@ -32,7 +23,11 @@ public class BookingCustomerResponseDTO {
 
     private String endTime;
 
-    private Integer total_Of_Money;
+    private String Id_Payment;
 
+    private String Type_Of_Payment; // Type of Payment
 
+    private String Id_C_Invoice;
+
+    private boolean Status_Invoice;
 }

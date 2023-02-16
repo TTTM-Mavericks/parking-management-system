@@ -27,5 +27,4 @@ public class BookingCustomerDTO {
     private String startTime;
 
     private String endTime;
-
 }

@@ -4,11 +4,12 @@ import lombok.Data;
 
 @Data
 public class AreaDTO {
-    private String Id_Area; // R or C
+
+    private String Type_of_area;
 
     private Integer Number_Of_Slot; // 20 slot for each area(customer, resident)
 
-    private String type; // name of area (resident area or customer area)
+    private String area_name; // name of area (resident area or customer area)
 
     private String Id_Building;
 }

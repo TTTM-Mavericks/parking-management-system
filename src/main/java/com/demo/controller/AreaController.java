@@ -27,7 +27,7 @@ public class AreaController {
     }
 
     @GetMapping("/findById")
-    public ResponseEntity<Optional<AreaResponseDTO>> findById(@RequestParam("Id_Area") String Id_Area)
+    public ResponseEntity<Optional<AreaResponseDTO>> findById(@RequestParam("Id_Area") Long Id_Area)
     {
         return new ResponseEntity<>(areaService.findById(Id_Area), HttpStatus.OK);
     }
@@ -39,14 +39,14 @@ public class AreaController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<AreaResponseDTO> update(@RequestBody String json, @RequestParam("Id_Area") String Id_Building) throws JsonProcessingException {
+    public ResponseEntity<AreaResponseDTO> update(@RequestBody String json, @RequestParam("Id_Area") Long Id_Area) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         AreaDTO dto = mapper.readValue(json, AreaDTO.class);
-        return new ResponseEntity<>(areaService.update(dto, Id_Building), HttpStatus.OK);
+        return new ResponseEntity<>(areaService.update(dto, Id_Area), HttpStatus.OK);
     }
 
     @DeleteMapping("/delete")
-    public ResponseEntity<String> update(@RequestParam("Id_Area") String Id_Area)
+    public ResponseEntity<String> update(@RequestParam("Id_Area") Long Id_Area)
     {
         return new ResponseEntity<>(areaService.delete(Id_Area), HttpStatus.OK);
     }

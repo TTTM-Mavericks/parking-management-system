@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AreaRepository extends JpaRepository<Area, String> {
+public interface AreaRepository extends JpaRepository<Area, Long> {
+    @Query(value = "select a.* from area a inner join building b on a.id_building = b.id_building " +
+            "where a.id_building = ?1", nativeQuery = true)
+    List<Area> findIdAreaByIdBuilding(String id_Building);
 
-    @Query(value = "select a.* from area a where a.id_building = ?1", nativeQuery = true)
-    List<Area> findAreaByIdBuilding(String idBuilding);
 }

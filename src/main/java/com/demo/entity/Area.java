@@ -14,33 +14,39 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Area {
+
     @Id
-    @Column(name = "Id_Area", unique = false)
-    private String Id_Area; // R or C
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Id_Area")
+    private Long Id_Area;
+
+    @Column(name = "Type_of_area")
+    private String Type_of_area; // R or C
 
     @Column(name = "Number_Of_Slot")
     private Integer Number_Of_Slot; // 20 slot for each area(customer, resident)
 
-    @Column(name = "type")
-    private String type; // name of area (resident area or customer area)
+    @Column(name = "Area_Name")
+    private String area_name; // name of area (resident area or customer area)
 
-    @ManyToOne(cascade =  CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "Id_Building")
     private Building building;
 
-    public Area(String id_Area, Integer number_Of_Slot, String type, Building building) {
-        Id_Area = id_Area;
+    public Area(String type_of_area, Integer number_Of_Slot, String area_name, Building building) {
+        Type_of_area = type_of_area;
         Number_Of_Slot = number_Of_Slot;
-        this.type = type;
+        this.area_name = area_name;
         this.building = building;
     }
 
     @Override
     public String toString() {
         return "Area{" +
-                "Id_Area='" + Id_Area + '\'' +
+                "Id_Area=" + Id_Area +
+                ", Type_of_area='" + Type_of_area + '\'' +
                 ", Number_Of_Slot=" + Number_Of_Slot +
-                ", type='" + type + '\'' +
+                ", area_name='" + area_name + '\'' +
                 ", building=" + building +
                 '}';
     }

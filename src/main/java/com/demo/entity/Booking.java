@@ -19,15 +19,19 @@ public class Booking {
     private Long Id_Booking;
 
     @Column(name = "startDate")
+    @Temporal(TemporalType.DATE)
     private Date startDate;
 
     @Column(name = "endDate")
+    @Temporal(TemporalType.DATE)
     private Date endDate;
 
     @Column(name = "startTime")
+    @Temporal(TemporalType.DATE)
     private String startTime;
 
     @Column(name = "EndTime")
+    @Temporal(TemporalType.DATE)
     private String endTime;
 
     @ManyToOne(cascade =  CascadeType.ALL, fetch = FetchType.LAZY)

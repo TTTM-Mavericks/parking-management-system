@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Customer_Slot {
     @Id
-    @Column(name = "Id_C_Slot", unique = false)
+    @Column(name = "Id_C_Slot")
     private String Id_C_Slot;
 
     @Column(name = "Type_Of_Vehicle")
@@ -24,7 +24,7 @@ public class Customer_Slot {
     @Column(name = "Status_Slots")
     private boolean Status_Slots;
 
-    @OneToMany(mappedBy = "customer_slot", cascade =  CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "customer_slot")
     @JsonIgnore
     private List<Booking> listBooking;
 
@@ -36,8 +36,9 @@ public class Customer_Slot {
     }
 
     @ManyToOne(cascade =  CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "Id_Area")
+    @JoinColumn(name = "Id_Area", unique = false)
     private Area area;
+
 
 
 }

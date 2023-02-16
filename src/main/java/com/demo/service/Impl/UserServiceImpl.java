@@ -7,20 +7,16 @@ import com.demo.utils.request.UserDTO;
 import com.demo.utils.response.UserResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
-import javax.crypto.spec.PSource;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 
 @Controller
 public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
+
 
     @Override
     public Optional<UserResponseDTO> findById(String id) {
@@ -33,7 +29,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponseDTO save(UserDTO user) throws Exception{
+    public UserResponseDTO save(UserDTO user){
         User dto = new User();
         dto.setId(user.getId());
         dto.setEmail(user.getEmail());
@@ -46,18 +42,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponseDTO update(UserDTO user, String id) throws Exception {
+    public UserResponseDTO update(UserDTO user, String id){
         User dto = userRepository.findById(id).get();
         dto.setId(user.getId());
         dto.setEmail(user.getEmail());
         dto.setGender(user.isGender());
-        SimpleDateFormat apiDateFormat = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy");
-        String date = user.getDateofbirth() + "";
-        Date apiDate = apiDateFormat.parse(date);
-        SimpleDateFormat desiredFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String formattedDateString = desiredFormat.format(apiDate);
-        Date formattedDate = desiredFormat.parse(formattedDateString);
-        dto.setDateofbirth(formattedDate);
+        dto.setDateofbirth(user.getDateofbirth());
         dto.setPassword(user.getPassword());
         dto.setFullname(user.getFullname());
         dto.setPhone(user.getPhone());

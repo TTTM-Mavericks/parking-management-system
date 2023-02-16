@@ -1,7 +1,6 @@
 package com.demo.service.Impl;
 
 import com.demo.entity.Area;
-import com.demo.entity.Manager;
 import com.demo.repository.AreaRepository;
 import com.demo.repository.BuildingRepository;
 import com.demo.service.AreaService;
@@ -13,9 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
-import static com.demo.service.Impl.BuildingServiceImpl.*;
 import static com.demo.service.Impl.BuildingServiceImpl.staticmapperedToBuilding;
 import static com.demo.service.Impl.ManageServiceImpl.mapperedToManager;
 
@@ -30,45 +27,39 @@ public class AreaServiceImpl implements AreaService {
     @Override
     public AreaResponseDTO save(AreaDTO dto) {
         Area area = new Area();
-        area.setId_Area(dto.getId_Area());
-        area.setType(dto.getType());
+        area.setArea_name(dto.getArea_name());
+        area.setType_of_area(dto.getType_of_area());
         area.setNumber_Of_Slot(dto.getNumber_Of_Slot());
         area.setBuilding(buildingRepository.findById(dto.getId_Building()).get());
         return mapperedToArea(areaRepository.save(area));
     }
 
     @Override
-    public Optional<AreaResponseDTO> findById(String Id_Area) {
-        return Optional.of(mapperedToArea(areaRepository.findById(Id_Area).get()));
+    public Optional<AreaResponseDTO> findById(Long Id_Area) {
+        return Optional.empty();
     }
 
     @Override
     public List<AreaResponseDTO> findAll() {
-        return areaRepository.findAll().stream().map(a -> mapperedToArea(a)).collect(Collectors.toList());
+        return null;
     }
 
     @Override
-    public AreaResponseDTO update(AreaDTO dto, String Id_Area) {
-        Area area = areaRepository.findById(Id_Area).get();
-        area.setId_Area(dto.getId_Area());
-        area.setType(dto.getType());
-        area.setNumber_Of_Slot(dto.getNumber_Of_Slot());
-        area.setBuilding(buildingRepository.findById(dto.getId_Building()).get());
-        return mapperedToArea(areaRepository.save(area));
+    public AreaResponseDTO update(AreaDTO dto, Long Id_Area) {
+        return null;
     }
 
     @Override
-    public String delete(String Id_Area) {
-        areaRepository.deleteById(Id_Area);
-        return "delete successfully";
+    public String delete(Long Id_Area) {
+        return null;
     }
 
     private AreaResponseDTO mapperedToArea(Area area)
     {
         AreaResponseDTO dto = new AreaResponseDTO();
-        dto.setId_Area(area.getId_Area());
+        dto.setArea_name(area.getArea_name());
         dto.setNumber_Of_Slot(area.getNumber_Of_Slot());
-        dto.setType(area.getType());
+        dto.setType_of_area(area.getType_of_area());
         ManagerResponseDTO manager =  mapperedToManager(buildingRepository.findById(area.getBuilding().getId_Building()).get().getManager());
         dto.setBuilding(staticmapperedToBuilding(buildingRepository.findById(area.getBuilding().getId_Building()).get(), manager));
         return dto;
@@ -78,8 +69,9 @@ public class AreaServiceImpl implements AreaService {
     {
         AreaResponseDTO dto = new AreaResponseDTO();
         dto.setId_Area(area.getId_Area());
+        dto.setArea_name(area.getArea_name());
         dto.setNumber_Of_Slot(area.getNumber_Of_Slot());
-        dto.setType(area.getType());
+        dto.setType_of_area(area.getType_of_area());
         dto.setBuilding(staticmapperedToBuilding(area.getBuilding(), manager));
         return dto;
     }
