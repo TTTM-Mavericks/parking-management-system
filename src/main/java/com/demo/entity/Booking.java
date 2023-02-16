@@ -14,7 +14,6 @@ import java.util.Date;
 @NoArgsConstructor
 public class Booking {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_Booking")
     private Long Id_Booking;
 
@@ -42,7 +41,8 @@ public class Booking {
     @JoinColumn(name = "Id_Customer")
     private Customer customer;
 
-    public Booking(Date startDate, Date endDate, String startTime, String endTime, Customer_Slot customer_slot, Customer customer) {
+    public Booking(Long id_Booking, Date startDate, Date endDate, String startTime, String endTime, Customer_Slot customer_slot, Customer customer) {
+        this.Id_Booking = id_Booking;
         this.startDate = startDate;
         this.endDate = endDate;
         this.startTime = startTime;

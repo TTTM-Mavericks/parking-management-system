@@ -47,17 +47,18 @@ public class BookingCustomerServiceImpl implements BookingCustomerService {
         Customer_Slot customer_slot = new Customer_Slot(dto.getId_C_Slot(), dto.getType_Of_Vehicle(), true, area);
         customer_slot_repository.save(customer_slot);
 
-
-        Booking booking1 = new Booking(dto.getStartDate(), dto.getEndDate(), dto.getStartTime(), dto.getEndTime(),
+        List<Booking> list = bookingRepository.findAll();
+        Booking booking1 = new Booking(Long.parseLong(list.size() + 1 + ""),
+                dto.getStartDate(), dto.getEndDate(), dto.getStartTime(), dto.getEndTime(),
                 customer_slot_repository.findById(dto.getId_C_Slot()).get(), customerRepository.findById(dto.getIdUser()).get());
         bookingRepository.save(booking1);
 //        System.out.println(booking1);
-        List<Booking> list = bookingRepository.findAll();
 
-        Booking getBookingId = bookingRepository.findidBooking(booking1.getStartDate(), booking1.getEndDate(), booking1.getStartTime(),
-                booking1.getEndTime(), dto.getIdUser(), dto.getId_C_Slot());
+
+//        Booking getBookingId = bookingRepository.findidBooking(booking1.getStartDate(), booking1.getEndDate(), booking1.getStartTime(),
+//                booking1.getEndTime(), dto.getIdUser(), dto.getId_C_Slot());
 //        System.out.println(getBookingId);
-        bookingCustomerResponseDTO =  new BookingCustomerResponseDTO((list.size() == 0) ? 1 : list.size(), dto.getFullname(), dto.getEmail(), dto.getPhone(),
+        bookingCustomerResponseDTO =  new BookingCustomerResponseDTO(booking1.getId_Booking(), dto.getFullname(), dto.getEmail(), dto.getPhone(),
                 dto.getId_Building(), dto.getType_Of_Vehicle(), dto.getId_C_Slot(), dto.getStartDate(),
                 dto.getEndDate(), dto.getStartTime(), dto.getEndTime(), 26);
         return  bookingCustomerResponseDTO;

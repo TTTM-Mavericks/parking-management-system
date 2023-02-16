@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookingCustomerResponseDTO {
-    private int id_Booking;
+    private Long id_Booking;
 
     private String fullname;
 
