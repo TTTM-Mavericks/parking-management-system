@@ -2,7 +2,10 @@ package com.demo.controller;
 
 import com.demo.service.ManageService;
 import com.demo.utils.request.ManagerDTO;
+import com.demo.utils.request.UserDTO;
 import com.demo.utils.response.ManagerResponseDTO;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +21,9 @@ public class ManagerController {
     ManageService manageService;
 
     @PostMapping("/save")
-    public ResponseEntity<ManagerResponseDTO> save(@RequestBody ManagerDTO dto)
-    {
+    public ResponseEntity<ManagerResponseDTO> save(@RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        ManagerDTO dto = mapper.readValue(json, ManagerDTO.class);
         return new ResponseEntity<>(manageService.save(dto), HttpStatus.OK);
     }
 
@@ -36,8 +40,9 @@ public class ManagerController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<ManagerResponseDTO> update(@RequestBody ManagerDTO dto, @RequestParam("IdUser") String IdUser)
-    {
+    public ResponseEntity<ManagerResponseDTO> update(@RequestBody String json, @RequestParam("IdUser") String IdUser) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        ManagerDTO dto = mapper.readValue(json, ManagerDTO.class);
         return new ResponseEntity<>(manageService.update(dto, IdUser), HttpStatus.OK);
     }
 

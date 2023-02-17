@@ -24,6 +24,6 @@ public class Customer {
     @Column(name = "Status_Account")
     private boolean Status_Account;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer", cascade =  CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Booking> list_Booking;
 }

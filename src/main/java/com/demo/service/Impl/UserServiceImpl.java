@@ -7,15 +7,16 @@ import com.demo.utils.request.UserDTO;
 import com.demo.utils.response.UserResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 
 @Controller
 public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
+
 
     @Override
     public Optional<UserResponseDTO> findById(String id) {
@@ -28,7 +29,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponseDTO save(UserDTO user) {
+    public UserResponseDTO save(UserDTO user){
         User dto = new User();
         dto.setId(user.getId());
         dto.setEmail(user.getEmail());
@@ -41,7 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponseDTO update(UserDTO user, String id) {
+    public UserResponseDTO update(UserDTO user, String id){
         User dto = userRepository.findById(id).get();
         dto.setId(user.getId());
         dto.setEmail(user.getEmail());

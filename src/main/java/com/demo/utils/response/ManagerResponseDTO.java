@@ -1,5 +1,8 @@
 package com.demo.utils.response;
 
+import com.demo.entity.Building;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.JoinColumn;
 import lombok.Data;
 
 @Data
@@ -9,4 +12,7 @@ public class ManagerResponseDTO {
     private UserResponseDTO user;
 
     private boolean Role;
+
+    @JsonIgnore
+    private Building building;
 }
