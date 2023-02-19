@@ -36,9 +36,10 @@ public class Resident_Slot_Service_Impl implements Resident_Slot_Service {
     public Resident_Slot_Response_DTO save(Resident_Slot_DTO dto) {
         Resident resident = residentRepository.findById(dto.getIdUser()).get();
 
-        Area area = areaRepository.findIdAreaByIdBuilding(dto.getId_Building(), dto.getId_R_Slot().contains("R") ? "R" : "C");
-
-        Resident_Slot resident_slot = new Resident_Slot(dto.getId_R_Slot(), dto.getType_Of_Vehicle(), true, resident, area);
+        Resident_Slot resident_slot = resident_slot_repository.findResidentSlot(dto.getId_R_Slot(), dto.getId_Building());
+        resident_slot.setType_Of_Vehicle(dto.getType_Of_Vehicle());
+        resident_slot.setStatus_Slots(true);
+        resident_slot.setResident(resident);
 
         resident_slot_repository.save(resident_slot);
 

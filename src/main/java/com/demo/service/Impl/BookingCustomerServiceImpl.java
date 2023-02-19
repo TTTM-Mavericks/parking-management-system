@@ -36,16 +36,16 @@ public class BookingCustomerServiceImpl implements BookingCustomerService {
     @Override
     public BookingCustomerResponseDTO save(BookingCustomerDTO dto) {
 
-
-        Area area = areaRepository.findIdAreaByIdBuilding(dto.getId_Building(), dto.getId_C_Slot().contains("C") ? "C" : "R");
-
-        Customer_Slot customer_slot = new Customer_Slot(dto.getId_C_Slot(), dto.getType_Of_Vehicle(), true, area);
-        customer_slot_repository.save(customer_slot);
+        Customer_Slot customerSlot = customer_slot_repository.findCustomerSlot(dto.getId_C_Slot(), dto.getId_Building());
+        customerSlot.setType_Of_Vehicle(dto.getType_Of_Vehicle());
+        customerSlot.setStatus_Slots(true);
+        customer_slot_repository.save(customerSlot);
 
         List<Booking> list = bookingRepository.findAll();
+
         Booking booking1 = new Booking(Long.parseLong(list.size() + 1 + ""),
                 dto.getStartDate(), dto.getEndDate(), dto.getStartTime(), dto.getEndTime(),
-                customer_slot_repository.findById(dto.getId_C_Slot()).get(), customerRepository.findById(dto.getIdUser()).get());
+                customerSlot, customerRepository.findById(dto.getIdUser()).get());
         bookingRepository.save(booking1);
 
         bookingCustomerResponseDTO =  new BookingCustomerResponseDTO(booking1.getId_Booking(), dto.getFullname(), dto.getEmail(), dto.getPhone(),

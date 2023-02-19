@@ -11,10 +11,13 @@ import java.util.List;
 @Entity
 @Table(name = "Customer_Slot")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Customer_Slot {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Id_Index")
+    private Long index;
     @Column(name = "Id_C_Slot")
     private String Id_C_Slot;
 

@@ -33,14 +33,7 @@ public class BuildingServiceImpl implements BuildingService {
         building.setNumber_Of_Area(dto.getNumber_Of_Area());
         List<Manager> list_manager = managerRepository.findAll();
         List<Building> List_building = buildingRepository.findAll();
-        if(List_building.size() == 0)
-        {
-            building.setManager(list_manager.get(0));
-        }
-        else if (List_building.size() > 0)
-        {
-            building.setManager(list_manager.get(List_building.size()));
-        }
+        building.setManager(list_manager.get(list_manager.size() - 1));
         return mapperedToBuilding(buildingRepository.save(building));
     }
 

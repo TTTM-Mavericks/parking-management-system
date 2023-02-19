@@ -37,6 +37,7 @@ public class PaymentCustomerServiceImpl implements PaymentCustomerService {
         Long Id_Booking = dto.getId_Booking();
 
         Booking booking = bookingRepository.findById(Id_Booking).get();
+
         List<Customer_Invoice> invoiceList =  invoice_c_repository.findAll();
         List<Payment_C> paymentList =  payment_c_repository.findAll();
 

@@ -8,10 +8,13 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "Resident_Slot")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Resident_Slot {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Id_Index")
+    private Long index;
+
     @Column(name = "Id_R_Slot")
     private String Id_R_Slot;
 
@@ -24,6 +27,14 @@ public class Resident_Slot {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "Id_Resident", referencedColumnName = "Id_Resident", unique = false)
     private Resident resident;
+
+    public Resident_Slot(String id_R_Slot, String type_Of_Vehicle, boolean status_Slots, Resident resident, Area area) {
+        Id_R_Slot = id_R_Slot;
+        Type_Of_Vehicle = type_Of_Vehicle;
+        Status_Slots = status_Slots;
+        this.resident = resident;
+        this.area = area;
+    }
 
     @ManyToOne
     @JoinColumn(name = "Id_Area")
