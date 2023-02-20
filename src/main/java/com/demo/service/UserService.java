@@ -1,5 +1,6 @@
 package com.demo.service;
 
+import com.demo.entity.User;
 import com.demo.utils.request.UserDTO;
 import com.demo.utils.response.UserResponseDTO;
 
@@ -17,5 +18,11 @@ public interface UserService {
     UserResponseDTO update(UserDTO dto, String id) throws Exception;
 
     String delete (String id);
+
+    UserResponseDTO createCustomer(UserDTO dto);
+
+    List<User> ListAllCustomer();
+
+    User updateCustomer(UserDTO dto);
 
 }

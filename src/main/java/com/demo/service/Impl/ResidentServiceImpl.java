@@ -1,13 +1,10 @@
 package com.demo.service.Impl;
 
-import com.demo.entity.Manager;
 import com.demo.entity.Resident;
-import com.demo.repository.CustomerRepository;
 import com.demo.repository.ResidentRepository;
 import com.demo.repository.UserRepository;
 import com.demo.service.ResidentService;
 import com.demo.utils.request.ResidentDTO;
-import com.demo.utils.response.ManagerResponseDTO;
 import com.demo.utils.response.ResidentResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

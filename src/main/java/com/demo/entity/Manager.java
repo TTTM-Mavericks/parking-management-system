@@ -20,7 +20,10 @@ public class Manager {
     private User user;
 
     @Column(name = "Role")
-    private boolean Role;
+    private int Role;
+    // role 1 : security
+    // role 2: manager Area
+    // role 3: Manager
 
     @OneToOne(mappedBy = "manager")
     private Building building;

@@ -10,5 +10,5 @@ public class Customer_Slot_DTO {
 
     private boolean Status_Slots;
 
-    private String Id_Area;
+    private Long Id_Area;
 }

@@ -11,10 +11,13 @@ import java.util.List;
 @Entity
 @Table(name = "Customer_Slot")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Customer_Slot {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Id_Index")
+    private Long index;
     @Column(name = "Id_C_Slot")
     private String Id_C_Slot;
 
@@ -36,9 +39,6 @@ public class Customer_Slot {
     }
 
     @ManyToOne(cascade =  CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "Id_Area", unique = false)
+    @JoinColumn(name = "Id_Area")
     private Area area;
-
-
-
 }

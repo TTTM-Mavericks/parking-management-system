@@ -11,7 +11,7 @@ public class ManagerResponseDTO {
 
     private UserResponseDTO user;
 
-    private boolean Role;
+    private int Role;
 
     @JsonIgnore
     private Building building;

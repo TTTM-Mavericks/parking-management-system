@@ -25,10 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerResponseDTO save(CustomerDTO dto) {
-        Customer customer = new Customer();
-        customer.setStatus_Account(dto.isStatus_Account());
-        customer.setIdUser(dto.getIdUser());
-        customer.setUser(userRepository.findById(dto.getIdUser()).get());
+        Customer customer = new Customer(dto.getIdUser(), dto.isStatus_Account(), userRepository.findById(dto.getIdUser()).get());
         return mapperedToCustomer(customerRepository.save(customer));
     }
 
@@ -47,6 +44,7 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = customerRepository.findById(IdUser).get();
         customer.setStatus_Account(dto.isStatus_Account());
         customer.setIdUser(dto.getIdUser());
+        customer.setCancel_of_payments(0);
         customer.setUser(userRepository.findById(dto.getIdUser()).get());
         return mapperedToCustomer(customerRepository.save(customer));
     }

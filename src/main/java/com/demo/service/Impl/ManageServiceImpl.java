@@ -30,7 +30,7 @@ public class ManageServiceImpl implements ManageService {
     @Override
     public ManagerResponseDTO save(ManagerDTO dto) {
         Manager manager = new Manager();
-        manager.setRole(dto.isRole());
+        manager.setRole(dto.getRole());
         manager.setIdUser(dto.getIdUser());
         manager.setUser(userRepository.findById(dto.getIdUser()).get());
         return mapperedToManager(managerRepository.save(manager));
@@ -49,7 +49,7 @@ public class ManageServiceImpl implements ManageService {
     @Override
     public ManagerResponseDTO update(ManagerDTO dto, String IdUser) {
         Manager manager = managerRepository.findById(IdUser).get();
-        manager.setRole(dto.isRole());
+        manager.setRole(dto.getRole());
         manager.setIdUser(dto.getIdUser());
         manager.setUser(userRepository.findById(dto.getIdUser()).get());
         return mapperedToManager(managerRepository.save(manager));
@@ -66,7 +66,7 @@ public class ManageServiceImpl implements ManageService {
         ManagerResponseDTO dto =  new ManagerResponseDTO();
         dto.setIdUser(manager.getIdUser());
         dto.setUser(mapperedToUserResponse(manager.getUser()));
-        dto.setRole(manager.isRole());
+        dto.setRole(manager.getRole());
         return dto;
     }
 }

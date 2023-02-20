@@ -34,7 +34,7 @@ public class Booking {
     private String endTime;
 
     @ManyToOne(cascade =  CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "Id_C_Slot")
+    @JoinColumn(name = "Id_Index")
     private Customer_Slot customer_slot;
 
     @ManyToOne(cascade =  CascadeType.ALL, fetch = FetchType.LAZY)
@@ -49,19 +49,6 @@ public class Booking {
         this.endTime = endTime;
         this.customer_slot = customer_slot;
         this.customer = customer;
-    }
-
-    @Override
-    public String toString() {
-        return "Booking{" +
-                "Id_Booking=" + Id_Booking +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                ", startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
-                ", customer_slot=" + customer_slot.getId_C_Slot() +
-                ", customer=" + customer.getIdUser() +
-                '}';
     }
 
     @OneToOne(mappedBy = "booking")
