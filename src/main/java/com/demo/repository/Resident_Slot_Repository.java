@@ -1,5 +1,6 @@
 package com.demo.repository;
 
+import com.demo.entity.Area;
 import com.demo.entity.Customer_Slot;
 import com.demo.entity.Resident_Slot;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,9 +17,9 @@ public interface Resident_Slot_Repository extends JpaRepository<Resident_Slot, L
     List<Resident_Slot> findResidentSlotByIdResident(String idUser);
 
     @Query(
-            value = "select r.* \n" +
-                    "from area a join resident_slot r on r.id_area =  a.id_area \n" +
-                    " join building b on a.id_building = b.id_building where r.id_r_slot = ?1 and b.id_building = ?2",
+            value = "select c.* \n" +
+                    "from area a join resident_slot c on c.id_area =  a.id_area \n" +
+                    " join building b on a.id_building = b.id_building where c.id_r_slot = ?1 and b.id_building = ?2",
             nativeQuery = true
     )
     Resident_Slot findResidentSlot(String id_r_slot, String id_building);
