@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+
+/* --------------------------REGISTER------------------------- */
+.container-register {
+  height: 790px;
+  position: relative;
+  width: 500px;
+  margin-right: 400px;
+}
+
+.background-register {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  right: 0;
+}
+
+.register-form {
+  width: 500px;
+  margin-top: 3%;
+  margin-left: 20%;
+  z-index: 99;
+  position: absolute;
+  border: #fff
+}
+
+.register-form input {
+  height: 50px;
+  border-radius: 5px;
+  border: 0.5px solid #8AA4B3;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 10px;
+
+
+}
+
+.register-form input:focus {
+  border: 0.5px solid #8AA4B3;
+  outline: auto #C5EDDF;
+}
+
+.validName {
+  position: relative;
+}
+
+.valids {
+  position: absolute;
+  color: green;
+  margin-left: -25px;
+  margin-top: 15px;
+}
+
+.invalids {
+  position: absolute;
+  color: red;
+  margin-left: -25px;
+  margin-top: 15px;
+}
+
+.valid-pwd {
+  position: relative;
+}
+
+.valid-pwd i {
+  position: absolute;
+  margin-top: -55px;
+  margin-left: 220px;
+}
+
+.hide {
+  display: none;
+}
+
+.hides{
+  display: none;
+}
+
+.invalid {
+  position: absolute;
+  color: red;
+  margin-left: 407px !important;
+  margin-top: -41px !important;
+}
+
+.valid {
+  position: absolute;
+  color: green;
+  margin-left: 407px !important;
+  margin-top: -41px !important;
+}
+
+.register-form>span {
+  margin-bottom: 30px;
+  color: #8AA4B3;
+  font-weight: 500;
+}
+
+
+.register-form>button {
+  margin-bottom: 30px;
+  margin-top: 160px;
+  font-weight: 500;
+}
+
+.register-form button:focus {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+}
+
+.register-form button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.register-form button:active {
+  box-shadow: #2DC98A 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+
+.register-form span {
+  margin-bottom: 30px;
+  color: #8AA4B3;
+  font-weight: 500;
+}
+
+#username {
+  width: 420px;
+
+}
+
+#fullname {
+  width: 420px;
+
+}
+
+#password {
+  width: 200px;
+
+}
+
+#confirm_password {
+  width: 200px;
+
+}
+
+#birthday {
+  width: 200px;
+  color: #757575;
+}
+
+
+
+input[type='radio']:checked:after {
+  visibility: visible;
+  accent-color: #2DC98A;
+  border: 1px solid white;
+}
+
+.gender {
+  font-weight: normal;
+  font-size: 14px;
+  color: #757575;
+  display: flex;
+}
+
+.input-gender {
+  margin-left: 30px;
+  position: relative;
+}
+
+.input-gender input {
+  width: 100% !important;
+  margin-right: 50px;
+  outline: none;
+  box-shadow: none;
+  margin-left: 10px;
+}
+
+.gender span {
+  color: #757575;
+  margin-top: 15px;
+  margin-left: -30px;
+}
+
+
+#email {
+  width: 420px;
+}
+
+#phone {
+  width: 420px;
+}
+
+.checkbox input {
+  float: left;
+  width: 20px;
+  margin-left: 20px;
+  outline: none;
+  box-shadow: none;
+
+}
+
+.checkbox p {
+  width: 380px;
+  margin-left: 60px;
+  color: #8AA4B3;
+  font-weight: 500;
+}
+
+.btn-res {
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  width: 420px !important;
+  height: 50px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid #2DC98A;
+  color: #fff;
+}
+
+
+.btn-already-res {
+  background-color: #fff !important;
+  color: black;
+  width: 180px !important;
+  height: 40px !important;
+  text-align: center;
+  border: 1px solid #2DC98A !important;
+  margin-top: -40px !important;
+  position: absolute;
+  right: 120px;
+  font-weight: 500;
+  font-size: 15px !important;
+}
+
+.btn-already-res:hover {
+  background-color: #2DC98A !important;
+
+}
+
+.res-container-register{
+  display: none;
+}
+
+@media screen and (max-width:400px) and (min-width: 100px) {
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  .container-register{
+    display: none;
+  }
+  .res-container-register{
+    display: block;
+  }
+  #password{
+    width: 420px;
+  }
+  #confirm_password{
+    width: 420px;
+  }
+  #birthday{
+    width: 420px;
+  }
+  .register-form input{
+    margin-left: 0px;
+  }
+
+
+  .btn-res {
+    margin-left: 0;
+  }
+}
+

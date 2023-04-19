@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  
+  
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  .errmsg {
+    color: red;
+  }
+  
+  
+  
+  app-check {
+    height: 20px;
+    width: 20px;
+    margin: 1%;
+  }
+  
+  
+  
+  
+  .card-body {
+    margin-left: 6vh;
+    border: none;
+  }
+  
+  
+  
+  .instruction {
+    position: relative;
+    margin-bottom: -20px;
+  }
+  
+  
+  .offscreen {
+    position: absolute;
+    left: -9999px;
+    z-index: 100;
+  }
+  
+  .errMsg {
+    background-color: red;
+  }
+  
+  .errmsg {
+    color: red;
+  }
+  
+  #emainode {
+    margin-bottom: 20px;
+  }
+  
+  #confirmnode {
+    margin-bottom: 0px;
+  }
+  
+  .line {
+    color: black;
+  }
+  
+  
+  
+  /* --------------------------BACKGROUND------------------------- */
+  .container-login {
+    position: relative;
+    height: 790px;
+  }
+  
+  .container-background {
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    background-color: #2DC98A !important;
+  }
+  
+  .container-background>img {
+    position: absolute;
+  }
+  
+  .container-background>img>img {
+    margin-top: -10px;
+    margin-left: 150px;
+  }
+  
+  /* --------------------------LOGIN------------------------- */
+  .login-form {
+    width: 350px;
+    margin-top: 5%;
+    margin-left: 20%;
+    position: absolute;
+    z-index: 11;
+  }
+  
+  .login-form input {
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0.5px solid #8AA4B3;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .login-form input:focus {
+    border: 0.5px solid #8AA4B3;
+    outline: auto #C5EDDF;
+  }
+  
+  .login-form>button {
+    margin-bottom: 30px;
+    margin-top: 160px;
+    font-weight: 500;
+  }
+  
+  .login-form>span {
+    margin-bottom: 30px;
+    color: #8AA4B3;
+    font-weight: 500;
+  }
+  
+  .login-form>form>a {
+    font-weight: 500;
+    color: #2DC98A !important;
+    text-decoration: underline !important;
+  }
+  
+  .login-form>form>a:hover {
+    color: #1F8A64 !important;
+  
+  }
+  
+  .dash-or {
+    width: 350px;
+    height: 0px;
+    border-bottom: 0.5px solid #8AA4B3;
+    position: relative;
+  }
+  
+  .dash-or span {
+    display: block;
+    width: 30px;
+    text-align: center;
+    color: #8AA4B3;
+    background-color: #fff;
+    position: absolute;
+    align-items: center;
+    margin-left: 160px;
+    margin-top: -13px;
+    font-weight: 500;
+  }
+  
+  .login-form button {
+    background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+    width: 350px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    border: 1px solid #2DC98A;
+  }
+  
+  .login-form>.google {
+    position: "relative";
+    background-color: #fff !important;
+  }
+  
+  .login-form>.google:hover {
+    background-color: #f4f4f4 !important;
+  }
+  
+  .login-form button:hover {
+    background-color: #1F8A64;
+    transition: 0.5s;
+  
+  }
+  
+  .anyaccount {
+    position: relative;
+    width: 160px !important;
+    height: 40px !important;
+    display: inline-block;
+    margin-top: 30px;
+  }
+  
+  .anyaccount span {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    margin: 0;
+    transform: translateY(-50%, -50%);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .btn-signup {
+    background-color: #fff !important;
+    width: 180px !important;
+    height: 40px !important;
+    text-align: center;
+    border: 1px solid #2DC98A !important;
+    margin-top: 30px !important;
+    float: right;
+    font-weight: 500;
+    font-size: 15px !important;
+  }
+  
+  .btn-signup:hover {
+    background-color: #2DC98A !important;
+  
+  }
+  
+
+  .reset-form {
+    width: 350px;
+    margin-top: 5%;
+    margin-left: 20%;
+    position: absolute;
+    z-index: 11;
+  }
+  
+  
+  
+  
+  
+  
+  
+  

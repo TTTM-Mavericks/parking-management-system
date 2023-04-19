@@ -1,0 +1,243 @@
+
+
+.admin-header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid black;
+  margin-top: -10px;
+}
+
+.admin-header a, i {
+  color: rgb(0, 0, 0) !important;
+}
+
+/* ----------------------------ADMIN-ROLE---------------------- */
+
+.admin-role {
+  border-bottom: 1px solid #A4A5A8;
+  height: 70px;
+  width: 100%;
+  position: relative;
+
+}
+
+.admin-role div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* move the element back 50% of its own height and width */
+  /* center the text within the paragraph */
+}
+
+/* ----------------------------------------- */
+
+.admin-homepage-body {
+  position: relative;
+  
+}
+
+.admin-nav-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 1000px;
+  float: left;
+  background-color: #000000;
+  
+}
+
+.admin-nav-custom-title{
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #ffffff;
+  color: white !important;
+}
+
+.admin-nav-custom-title p{
+  font-size: 23px !important;
+  font-weight: bold;
+
+}
+
+.admin-nav-custom label {
+  color: white !important;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  font-size: 16px !important;
+  font-weight: bold;
+  color: #2ED8B6 !important;
+
+}
+
+
+
+.admin-nav-custom li {
+  width: 100% !important;
+  list-style: none;
+  padding-left: 10% !important;
+  z-index: 100;
+  font-size: 14px !important;
+  color: #B2B9BF !important;
+
+}
+
+.navbar-nav li:active,
+.navbar-nav li.active {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+}
+
+.nav-custom li {
+  display: inline-block;
+  position: relative;
+  
+  
+
+}
+
+
+
+.admin-nav-custom a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.admin-nav-custom li:hover {
+  transition: 1s;
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+}
+
+.admin-nav-custom li:focus {
+  transition: 1s;
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+}
+
+/* ----------------------------------------DASHBOARD---------------------------- */
+.admin-homepage-dashboard {
+  margin-left: 20%;
+  padding-top: 40px;
+  width: 75%;
+  right: 6%;
+  top: 0px;
+  
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  float: right;
+}
+
+.pagination li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.pagination li a {
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.pagination li.active a {
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  color: #fff;
+  border-color: #2DC98A;
+}
+
+.pagination li a:hover {
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+}
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+
+.not-hover:hover {
+  border: none;
+}
+
+.logo {
+  width: 150px;
+  height: 40px;
+  margin-left: 80px;
+  background-color: black;
+  float: left;
+}
+
+.footer {
+  width: 100%;
+  background-color: #2DC98A !important;
+  padding: 1%;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer a,
+p {
+  color: white;
+}
+
+table>thead>tr{
+  background-color: #000000;
+  color: #fff;
+}
+
+.save-edit{
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+
+}
+
+.save-edit:active {
+  box-shadow: #2DC98A 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.save-edit:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+
+.status-complete{
+  background-image: radial-gradient(100% 100% at 100% 0, #f59891 0, #DF3D30 100%);
+  box-shadow: #DF3D30 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #DF3D30 0 -3px 0 inset;
+
+}
+
+.status-complete:focus {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+}
+
+.status-complete:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #DF3D30 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.status-complete:active {
+  box-shadow: #DF3D30 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+/* -------------- */

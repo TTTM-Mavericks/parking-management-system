@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+
+/* --------------------------------------RESERVATION--------------------------------- */
+
+.body-reservation {
+  background-image: url('/public/assets/img/building-thumbnail.png');
+  background-size: 80%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.step-reservation {
+  text-align: center;
+}
+
+.step-reservation .circle div {
+  width: 80px;
+  height: 80px;
+  background-color: #e7e6e6;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-align: 'center';
+  cursor: pointer;
+}
+
+.step-reservation .circle div:active {
+  background-color: black;
+}
+
+.step-reservation .circle div>span {
+  display: block;
+  padding-top: 30%;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.step-reservation Link {
+  text-decoration: none;
+}
+
+/* --------------------------------------RESERVATION-DETAILS--------------------------------- */
+
+.reservation-details {
+
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.reservation-details input,
+select {
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+}
+
+/* .reservation-details select{
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px !important;
+} */
+
+.reservation-details .class-input {
+  width: 40%;
+  margin-left: 10%;
+
+
+}
+
+.personal-details {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.personal-details input {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+}
+
+.personal-details .class-input {
+  width: 40%;
+  margin-left: 10%;
+
+}
+
+.personal-details button {
+  height: 180%;
+  width: 100%;
+  background: linear-gradient(2deg, rgba(45, 201, 138, 0.9), rgba(45, 201, 138, 0.9), rgba(45, 201, 138, 0.9));
+  border: 1px solid #2DC98A;
+  border-radius: 5px;
+  color: #fff;
+
+}
+
+.personal-details .class-input button:hover {
+  background-color: #3ab489e0 !important;
+
+}
+
+
+/*  */
+.personal-details button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.personal-details .card-footer button:focus {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+}
+
+.personal-details .card-footer button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.personal-details .card-footer button:active {
+  box-shadow: #2DC98A 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/*  */
+
+.zone-reservation {
+  position: absolute;
+  top: 1110px;
+  right: 10%;
+
+}
+
+.zone-reservation table {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* ----------------------------------PAYMENT-INFORMATION-------------------------------------*/
+
+.payment-infor {
+  margin-left: 35%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.payment-infor p {
+  color: black;
+}
+
+.payment-infor button {
+  width: 35%;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.5px solid #2DC98A;
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  margin-left: 5%;
+}
+
+.payment-infor img {
+  width: 500px;
+  height: 150px;
+}
+
+.payment-infor-detail {
+  margin-top: 5%;
+}
+
+.payment-infor-detail span {
+  display: inline-block;
+  width: 200px;
+  margin-right: 0px;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------BANKING--------------------------- */
+
+.header-banking-gate {
+  width: 100%;
+  height: 200px;
+  background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  position: relative;
+  text-align: center;
+}
+
+.header-banking-gate div {
+  font-size: 40px;
+  width: 300px;
+  text-align: center;
+  top: 20%;
+  left: 41%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.input-creadit-card {
+  margin-top: 50px;
+  float: right;
+}
+
+/* -----------------------------------------------RESERVATION-COMPLETE------------------ */
+
+.complete-infor {
+  margin-left: 35%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.complete-infor-detail {
+  margin-top: 5%;
+}
+
+.complete-infor-detail span {
+  display: inline-block;
+  width: 200px;
+  margin-right: 0px;
+  font-weight: bold;
+}
+
+@media screen and (max-width:400px) and (min-width: 100px) {
+  .payment-infor p {
+    margin-left: -60%;
+    text-align: left;
+    width: 380px !important;
+  }
+
+  .payment-infor img {
+    width: 180%;
+    margin-left: -60%;
+
+  }
+
+  .payment-infor-detail {
+    width: fit-content;
+    margin-left: -60%;
+    text-align: left;
+  }
+
+  .bankingorcash {
+    width: 400px !important;
+    margin-left: -87% !important;
+    text-align: left !important;
+    margin-bottom: 10%;
+    font-weight: bold;
+  }
+
+  .formchoose {
+    width: 300px !important;
+    margin-left: -55% !important;
+    text-align: left !important;
+  }
+
+  .form-select {
+    width: 65% !important;
+  }
+
+  .class-input label {
+    width: 200px !important;
+  }
+
+  .complete-infor-detail {
+    margin-left: -80%;
+  }
+
+  .personal-details h3 {
+    text-align: center !important;
+    margin-left: -20px !important;
+  }
+
+  .personal-details {
+    margin-top: 200% !important;
+  }
+
+  .personal-details .class-input {
+    width: 100% !important;
+    margin-left: -5% !important;
+  }
+
+  .reservation-details {
+    margin-top: 10% !important;
+  }
+
+  .reservation-details h3 {
+    text-align: center !important;
+    margin-left: -20px !important;
+  }
+
+  .reservation-details .class-input {
+    width: 100% !important;
+    margin-left: -5% !important;
+  }
+
+  .table-responsive {
+    width: 60% !important;
+    margin-top: 180% !important;
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+  }
+}
+
+.cancel-payment {
+  background-image: radial-gradient(100% 100% at 100% 0, #f59891 0, #DF3D30 100%) !important;
+  box-shadow: #DF3D30 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #DF3D30 0 -3px 0 inset !important;
+
+}
+
+.cancel-payment, .banking:focus {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+}
+
+.cancel-payment:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #DF3D30 0 -3px 0 inset !important;
+  transform: translateY(-2px);
+}
+
+.cancel-payment:active {
+  box-shadow: #DF3D30 0 3px 7px inset !important;
+  transform: translateY(2px);
+}
+
+.banking {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+}
+
+.banking:active {
+  box-shadow: #2DC98A 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.banking:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.notice-infor{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+}

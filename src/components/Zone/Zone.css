@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* ------------------------------------zone-area-homepage---------------------------- */
+
+.zone-area-homepage {
+  margin-top: 4% !important;
+}
+
+.zone-area-homepage .card {
+  width: 22%;
+
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+  border-radius: 0;
+}
+
+.zone-area-homepage .card-header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border: none;
+}
+
+.zone-area-homepage .card-header div {
+  position: absolute;
+  background-color: #2DC98A !important;
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  width: 50%;
+  height: 25px;
+  top: 0;
+  right: 0;
+  margin-right: -12px;
+  text-align: center;
+}
+
+.zone-area-homepage .card-header span {
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  /* text-decoration: underline; */
+}
+
+.zone-area-homepage .card-body span {
+  margin-left: -48px;
+}
+
+.zone-area-homepage .card-body div {
+  margin-left: -48px;
+  margin-top: 10px;
+}
+
+.zone-area-homepage .card-footer {
+  background-color: #fff;
+  border: none;
+}
+
+/* .zone-area-homepage .card-footer button {
+  height: 30px;
+  width: 55%;
+  background-color: #2DC98A !important;
+  border: 1px solid #2DC98A;
+  color: #fff;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.zone-area-homepage .card-footer button:hover {
+  background-color: #3ab489 !important;
+
+} */
+
+.zone-area-homepage .card-footer button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.zone-area-homepage .card-footer button:focus {
+  box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+}
+
+.zone-area-homepage .card-footer button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.zone-area-homepage .card-footer button:active {
+  box-shadow: #2DC98A 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.barrier-homepage {
+  margin-top: 100px !important;
+}
+
+.barrier-homepage div {
+  width: 35.5%;
+  height: 280px;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.barrier-homepage>div>span {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 70px;
+  border-left: 2px solid #2DC98A;
+
+}
+
+.barrier-homepage>div>span>h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.img-gate-homepage {
+  background-image: url('/public/assets/img/gate.jpg');
+  ;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: fill;
+  text-align: center;
+}
+
+.img-gate-homepage button {
+  height: 20%;
+  width: 30%;
+  margin-top: 20%;
+  background: linear-gradient(2deg, rgba(45, 201, 138, 0.9), rgba(45, 201, 138, 0.9), rgba(45, 201, 138, 0.9));
+  border: 1px solid #2DC98A;
+  color: #fff;
+
+}
+
+.img-gate-homepage button:hover {
+  background-color: #3ab489e0 !important;
+
+}
+
+.img-gate-homepage:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zone-area-homepage .card-footer button:hover {
+  background-color: #3ab489 !important;
+
+}
+
+/* -----------------------------------------------ZONE-DETAIL------------------------------- */
+
+.zone-detail {
+  width: 45%;
+  margin-left: 10%;
+  margin-top: 50px;
+  font-size: 18px;
+
+}
+
+
+.zone-detail p {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid green;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table-responsive div {
+  width: 100%;
+  background-color: #ffe250df;
+  text-align: center;
+}
+
+.zone-detail-make {
+  position: absolute;
+  top: 100%;
+  right: 20%;
+  margin-top: 120px;
+
+}
+
+.zone-detail-make input {
+  width: 200px;
+}
+
+.zone-detail button:hover {
+  background-color: #1F8A64;
+  transition: 0.5s;
+
+}
+
+@media screen and (max-width:400px) and (min-width: 100px) {
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+
+  .zone-detail-make {
+    position: relative;
+    width: 50%;
+    margin-left: 30%;
+  }
+
+  .zone-detail button {
+    width: 66% !important;
+    margin-top: 20%;
+    margin-bottom: 20% !important;
+    margin-left: 50% !important;
+  }
+
+  .zone-detail-make .class-input {
+    width: 100%;
+  }
+
+  .zone-detail-make .class-input select {
+    width: 235px !important;
+  }
+
+  .zone-detail .table-responsive {
+    margin-top: -10px !important;
+  }
+
+  .zone-detail .table-responsive {
+    width: 150% !important;
+    margin-left: 20px !important;
+  }
+}

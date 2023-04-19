@@ -1,0 +1,30 @@
+
+.body-link {
+    width: 25%;
+    height: max-content;
+    background-color: #263544;
+    margin-left: -20px;
+}
+
+.body-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.body-link a li {
+    margin-bottom: 10%;
+    margin-left: 15px;
+    list-style: none;
+    padding: 10px 10px;
+}
+
+.active li{
+    background-color: #2DC98A;
+box-shadow: #2DC98A 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2DC98A 0 -3px 0 inset;
+  background-image: radial-gradient(100% 100% at 100% 0, #5aff91 0, #2DC98A 100%);
+    padding: 10px 10px;
+}
+
+.logo:hover {
+    color: #2dc98a !important;
+}
